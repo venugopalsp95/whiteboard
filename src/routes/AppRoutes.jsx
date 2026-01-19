@@ -6,7 +6,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/home" element={<Landing />} />
-      <Route path="/whiteboard" element={<Whiteboard />} />
+      <Route path="/board" element={<Whiteboard />} />
       <Route path="/about" element={<About />} />
     </Routes>
   );

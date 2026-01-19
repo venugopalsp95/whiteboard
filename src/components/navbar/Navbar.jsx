@@ -12,11 +12,11 @@ const Navbar = () => {
         <ul>
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "")}
-            to="/"
+            to="/home"
           >
             <li onClick={() => setIsOpen(!isOpen)}> Home</li>
           </NavLink>
-          <NavLink to="/whiteboard">
+          <NavLink to="/board">
             <li onClick={() => setIsOpen(!isOpen)}>WhiteBoard</li>
           </NavLink>
           <NavLink to="/about">

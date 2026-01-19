@@ -17,6 +17,9 @@
 .menu {
   display: none;
 }
+.menu:hover {
+  cursor: pointer;
+}
 .nav-links .active {
   background-color: #4b6cb7;
   border-radius: 0.5rem;

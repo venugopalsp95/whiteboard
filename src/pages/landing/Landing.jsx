@@ -10,12 +10,18 @@ const Landing = () => {
           A frontend-only project demonstrating real-time collaboration, dynamic
           sticky notes, and optimistic UI updates.
         </p>
-        <ul>
-          <li>Drag and drop sticky notes.</li>
-          <li>Add new notes dynamically.</li>
-          <li>Simulated multi-user collaboration (same browser).</li>
-        </ul>
-        <Link to="whiteboard" className="button">
+        <section>
+          <h3>Features</h3>
+
+          <ul>
+            <li>Drag and drop sticky notes.</li>
+            <li>Add new notes dynamically.</li>
+            <li>Edit, Delete sticky notes.</li>
+
+            <li>Simulated multi-user collaboration (same browser).</li>
+          </ul>
+        </section>
+        <Link to="/board" className="button">
           Open Whiteboard
         </Link>
       </div>

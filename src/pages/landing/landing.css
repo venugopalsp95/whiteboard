@@ -16,6 +16,22 @@
   gap: 1.5rem;
   text-align: justify;
 }
+.landingpage-details section {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow:
+    #4b6bb7bc 0px 1px 2px 0px,
+    #18284818 0px 1px 3px 1px;
+}
+.landingpage-details section h3 {
+  border-bottom: 1px solid #4b6cb7;
+  padding-bottom: 0.5rem;
+}
 .landingpage-details ul {
   display: flex;
   flex-direction: column;
