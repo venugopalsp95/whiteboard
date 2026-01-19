@@ -12,7 +12,7 @@ const Navbar = () => {
         <ul>
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "")}
-            to="/home"
+            to="/"
           >
             <li onClick={() => setIsOpen(!isOpen)}> Home</li>
           </NavLink>
