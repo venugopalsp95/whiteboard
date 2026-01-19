@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Landing />} />
+      <Route path="/home" element={<Landing />} />
       <Route path="/whiteboard" element={<Whiteboard />} />
       <Route path="/about" element={<About />} />
     </Routes>
