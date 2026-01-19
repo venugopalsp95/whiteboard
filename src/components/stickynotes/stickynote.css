@@ -1,0 +1,37 @@
+.note {
+  position: absolute;
+  width: 140px;
+  padding: 10px;
+  background: #fff59d;
+  border-radius: 6px;
+  cursor: grab;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: rotate(-2deg);
+}
+
+.note textarea {
+  width: 100%;
+  height: 60px;
+  padding: 0.2rem;
+  font-family: "Caveat Brush", cursive;
+}
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+.note-actions button {
+  border: none;
+  outline: none;
+  background: none;
+}
+.note-actions button:hover {
+  cursor: pointer;
+}
+.note-text {
+  font-family: "Caveat Brush", cursive;
+  overflow: hidden;
+}
+.note-text:hover {
+  overflow: -moz-hidden-unscrollable;
+}

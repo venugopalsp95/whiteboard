@@ -1,0 +1,13 @@
+.canvas {
+  position: relative;
+  /* width: 100vw; */
+  height: 100vh;
+  background: #f9fafb;
+  overflow: hidden;
+}
+.canvas-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
