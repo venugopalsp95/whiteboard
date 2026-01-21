@@ -1,16 +1,179 @@
-# React + Vite
+# Real Time Collaborative Whiteboard (Frontend Only)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **real-time collaborative whiteboard** built using **React**, designed to showcase strong frontend fundamentals such as state management, drag-and-drop interactions, controlled inputs, and real-time synchronization **without a backend**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo & Repository
 
-## React Compiler
+- **Live application:** https://venugopalsp95.github.io/whiteboard/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **GitHub Repository:** https://github.com/venugopalsp95/whiteboard
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Screenshots
+
+### Home page
+
+[Home Page](./src/assets/screenshots/home.png)
+
+### Whiteboard Page
+
+[Whiteboard](./src/assets/screenshots/whiteboard.png)
+
+### About Page
+
+[About Page](./src/assets/screenshots/about.png)
+
+---
+
+## Features
+
+- Create sticky notes with custom text
+- Each note gets a unique pastel color (HSL-based)
+- Edit notes inline
+- Delete notes
+- Drag & drop notes freely
+- Notes are constrained within the viewport (`vw` / `vh`)
+- Data persistence using `localStorage`
+- Real-time sync across browser tabs using `BroadcastChannel`
+- Responsive full-screen whiteboard
+
+---
+
+## Tech Stack
+
+- **React (JavaScript)**
+- **React Hooks**
+- **React Query**
+- **CSS**
+- **localStorage**
+- **BroadcastChannel API**
+
+> ❌ No backend  
+> ❌ No database  
+> ❌ No WebSockets
+
+This project intentionally focuses on **frontend-only architecture**.
+
+---
+
+## Folder Structure
+
+```text
+src/
+├── components/
+│ ├── navbar/
+│ │ ├──Navbar.jsx
+│ │ └──navbar.css
+│ ├── stickynotes/
+│ │ ├── Stickynote.jsx
+│ │ └── stickynote.css
+│ ├── whiteboardcanvas/
+│ │ ├── Whiteboardcanvas.jsx
+│ │ └── whiteboardcanvas.css
+├── hools/
+│ ├── useBoard.jsx
+│ ├── useUpdateNote.jsx
+│ └── useBroadcast.jsx
+├── data/
+│ └── initialBoard.js
+├── pages/
+│ ├── about/
+│ │ ├──About.jsx
+│ │ └──about.css
+│ ├── landing/
+│ │ ├── Landing.jsx
+│ │ └── landing.css
+│ ├── whiteboard/
+│ │ ├── Whiteboard.jsx
+│ │ └── whiteboard.css
+├── routes/
+│ └── AppRoutes.jsx
+├── styles/
+│ └── index.css
+├── utils/
+│ └── storage.js
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Key Concepts Demonstrated
+
+### Controlled Inputs
+
+All inputs (add/edit note) use controlled components with React state.
+
+### Immutable State Updates
+
+Notes are updated immutably to ensure predictable re-renders.
+
+### Drag & Drop Logic
+
+- Calculates cursor offset on drag start
+- Converts viewport coordinates to canvas-relative positions
+- Clamps note position to screen boundaries
+
+### Real-Time Collaboration (Frontend Only)
+
+Uses the **BroadcastChannel API** to sync state changes across multiple browser tabs — simulating multi-user collaboration without a backend.
+
+### Persistence
+
+All board data is saved to `localStorage`, ensuring data survives refreshes.
+
+---
+
+## Real-Time Sync Explained
+
+When a note is added, edited, moved, or deleted:
+
+1. The board state updates locally
+2. Changes are saved to `localStorage`
+3. Updates are broadcast to other open tabs
+4. Other tabs receive and apply the update instantly
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/venugopalsp95/whiteboard.git
+
+npm install
+
+npm run dev
+```
+
+---
+
+## How to Test Real-Time Sync
+
+1. Open the app in **two browser tabs**
+2. Add / edit / drag a note in one tab
+3. Changes instantly appear in the other tab
+
+---
+
+## 📌 Future Improvements (Optional)
+
+- User-based cursors
+- Zoom & pan
+- Touch support
+- Backend integration
+- Undo / redo
+- Color picker per note
+
+---
+
+## Author
+
+**Venugopal S P**
+React Frontend Developer
+
+---
