@@ -160,11 +160,10 @@ npm run dev
 
 ---
 
-## 📌 Future Improvements (Optional)
+## Future Improvements
 
 - User-based cursors
-- Zoom & pan
-- Touch support
+- Zoom
 - Backend integration
 - Undo / redo
 - Color picker per note
