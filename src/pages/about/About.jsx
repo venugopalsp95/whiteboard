@@ -4,9 +4,9 @@ const About = () => {
     <div className="page about-container">
       <h2>About This Project</h2>
       <p className="about-intro">
-        This is a frontend-focused Real-Time Collaborative Whiteboard build
+        This is a frontend-focused Real-Time Collaborative Whiteboard built
         using React. The goal of this project is to demonstrate modern frontend
-        architecture, real-time UI,updates, and clean state management without
+        architecture, real-time UI updates, and clean state management without
         relying on a backend.
       </p>
       <section>
@@ -46,7 +46,7 @@ const About = () => {
         <h3>Future Improvements</h3>
         <ul>
           <li>
-            WebSocket or Firebase integration for real multi-device users.
+            WebSocket or Firebase integration for real-time multi-device users.
           </li>
           <li>User presence indicators.</li>
           <li>Undo / redo functionality.</li>
@@ -55,7 +55,7 @@ const About = () => {
       </section>
       <p className="footer">
         This project is designed to highlight frontend engineering skills,
-        architecture thinking, adn real-time UI patterns.
+        architecture thinking, and real-time UI patterns.
       </p>
     </div>
   );
